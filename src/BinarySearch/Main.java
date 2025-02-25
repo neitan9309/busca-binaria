@@ -38,12 +38,12 @@ public class Main{
 			System.out.println("Meio: " + value); //Impressão que nos ajuda a mapear em quantos passos o algoritmo achou o alvo.
 			
 			if(value < target) low = middle + 1; //Se o valor do alvo for maior que o valor "meio", o indíce que
-												//estamos procurando só pode estar na metade superior da array.
-												//Definimos então um novo "início de intervalo" e consequentemente
-												//descartamos a primeira metada da array.
+							     //estamos procurando só pode estar na metade superior da array.
+							     //Definimos então um novo "início de intervalo" e consequentemente
+							     //descartamos a primeira metada da array.
 			
 			else if(value > target) high = middle - 1; //Então se o valor do alvo for menor que o valor "meio", definimos um novo
-													  //"fim do intervalo", descartando assim, a segunda metade da array.
+								   //"fim do intervalo", descartando assim, a segunda metade da array.
 			
 			else return middle;//Condicional acionada caso o valor "meio" for o alvo que estamos procurando.
 		}
