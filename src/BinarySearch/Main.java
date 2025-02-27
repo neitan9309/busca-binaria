@@ -7,12 +7,12 @@ public class Main{
 	
 	public static void main(String[] args) {
 		
-		int array[] = new int[100000]; //Criação de uma array com 100.000 posições.
+		int array[] = new int[100000]; //Criação de um array com 100.000 posições.
 		int target = 44002; //Alvo da busca.
 		
 		for(int i = 0; i < array.length; i++) {
 			array[i] = i;
-		} //Laço que preenche todas as posições da array.
+		} //Laço que preenche todas as posições do array.
 		
 		int index = binarySearch(array, target); //Criação de um variável que levará o resultdo do método de busca binária.
 		
@@ -32,18 +32,18 @@ public class Main{
 
 		while(low <= high) { //Laço while que roda enquanto tiver números válidos no intervalo da busca.
 			
-			int middle = low + (high - low) / 2; //Cálculo para achar o index que corresponde ao meio da array.
+			int middle = low + (high - low) / 2; //Cálculo para achar o index que corresponde ao meio do array.
 			int value = array[middle];
 			
 			System.out.println("Meio: " + value); //Impressão que nos ajuda a mapear em quantos passos o algoritmo achou o alvo.
 			
 			if(value < target) low = middle + 1; //Se o valor do alvo for maior que o valor "meio", o indíce que
-							     //estamos procurando só pode estar na metade superior da array.
+							     //estamos procurando só pode estar na metade superior do array.
 							     //Definimos então um novo "início de intervalo" e consequentemente
-							     //descartamos a primeira metada da array.
+							     //descartamos a primeira metada do array.
 			
 			else if(value > target) high = middle - 1; //Então se o valor do alvo for menor que o valor "meio", definimos um novo
-								   //"fim do intervalo", descartando assim, a segunda metade da array.
+								   //"fim do intervalo", descartando assim, a segunda metade do array.
 			
 			else return middle;//Condicional acionada caso o valor "meio" for o alvo que estamos procurando.
 		}
